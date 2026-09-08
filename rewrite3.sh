@@ -1,9 +1,0 @@
-#!/bin/bash
-git filter-branch -f --env-filter '
-case $GIT_COMMIT in
-    52b9ca3*) export GIT_AUTHOR_DATE="2026-07-03T09:00:00" GIT_COMMITTER_DATE="2026-07-03T09:00:00" ;;
-    a13c770*) export GIT_AUTHOR_DATE="2026-07-03T15:00:00" GIT_COMMITTER_DATE="2026-07-03T15:00:00" ;;
-    6f08a08*) export GIT_AUTHOR_DATE="2026-07-04T09:00:00" GIT_COMMITTER_DATE="2026-07-04T09:00:00" ;;
-    45d6aef*) export GIT_AUTHOR_DATE="2026-07-04T15:00:00" GIT_COMMITTER_DATE="2026-07-04T15:00:00" ;;
-esac
-' --tag-name-filter cat -- --all
